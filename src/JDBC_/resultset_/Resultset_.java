@@ -30,7 +30,7 @@ public class Resultset_ {
         while (resultSet.next()){
             int id = resultSet.getInt(1);   //获取该行的第一列
             String name = resultSet.getString(2);   //获取该行的第二列
-            String sex = resultSet.getString(3);
+            String sex = resultSet.getString("sex");    //也可以通过列名字获取
             Date date = resultSet.getDate(4);
             String phone = resultSet.getString(5);
             System.out.println(id + " " + name + " " + sex+ " "+date+ " " +phone);
